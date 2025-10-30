@@ -1,26 +1,193 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-disabled: var(--disabled);
+  --color-additional: var(--additional);
+  --color-dark: var(--dark);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-white-bg: var(--white-bg);
+  --color-dark-bg: var(--dark-bg);
+  --color-error: var(--error);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root{
+  --primary: #9399D4;
+  --secondary: #F5679B;
+  --tertiary: #50D88D;
+  --additional: #9399D4;
+  --disabled: #6D706F;
+  --dark: #434343;
+  --black: #000000;
+  --white: #FFFFFF;
+  --white-bg: #EEEEEE;
+  --dark-bg: #D9D9D9;
+  --error: #FF0000;
+  --sidebar: hsl(0 0% 98%);
+  --sidebar-foreground: hsl(240 5.3% 26.1%);
+  --sidebar-primary: hsl(240 5.9% 10%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(240 4.8% 95.9%);
+  --sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --sidebar-border: hsl(220 13% 91%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Font settings */
+.font-noto {
+  font-family: var(--font-noto-sans-jp), sans-serif;
+}
+
+.font-shippori {
+  font-family: var(--font-shippori-mincho), serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant-infant), serif;
+}
+
+@layer utilities {
+  /* Container */
+  .container {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  /* Text Decoration */
+  .text-small {
+    @apply text-[10px] font-normal;
+  }
+  .text-normal {
+    @apply text-xs font-normal;
+  }
+  .text-base {
+    @apply text-base font-normal;
+  }
+  .text-price {
+    @apply text-lg font-semibold;
+  }
+  .text-large {
+    @apply text-xl font-semibold;
+  }
+  .text-xlarge {
+    @apply text-2xl font-semibold;
+  }
+  .text-xxlarge {
+    @apply text-3xl font-semibold;
+  }
+  .text-para {
+    @apply text-xs font-normal tracking-widest leading-6;
+  }
+
+  /* Layout */
+  .flex-row-start {
+    @apply flex justify-start;
+  }
+  .flex-row-items-start {
+    @apply flex items-start;
+  }
+  .flex-row-end {
+    @apply flex justify-end;
+  }
+  .flex-row-items-end {
+    @apply flex items-end;
+  }
+  .flex-row-center {
+    @apply flex items-center;
+  }
+  .flex-row-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-col-start {
+    @apply flex flex-col justify-start;
+  }
+  .flex-col-end {
+    @apply flex flex-col justify-end;
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center;
+  }
+  .flex-col-between {
+    @apply flex flex-col justify-between items-center;
+  }
+
+  /* Border Decoration */
+  .card-border {
+    @apply border border-white-bg;
+  }
+  .philo-title {
+    @apply text-base md:text-lg font-medium tracking-wider leading-10 text-[#a7834d];
+  }
+  .philo-title2 {
+    @apply text-base md:text-lg font-medium tracking-wider leading-7 text-[#a7834d]
+  }
+  .philo-title2 span {
+    @apply inline-block;
+  }
+  .philo-para {
+    @apply text-xs md:text-sm font-medium tracking-wider leading-7 text-[#4d4d4d];
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  /* Text Decorations */
+  h1 {
+    @apply text-2xl font-semibold;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  h3 {
+    @apply text-lg font-semibold;
+  }
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+.dark {
+  --sidebar: hsl(240 5.9% 10%);
+  --sidebar-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-primary: hsl(224.3 76.3% 48%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(240 3.7% 15.9%);
+  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-border: hsl(240 3.7% 15.9%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+@theme inline {
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+html {
+  font-family: "Yu Gothic", YuGothic, sans-serif;
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
