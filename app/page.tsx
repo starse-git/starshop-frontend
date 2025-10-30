@@ -76,15 +76,31 @@ export default function Home() {
           <FullImageSlider images={imagesSp} />
         </div>
         <PickUpSectionComponent />
-        <ProductsSectionComponent />
-        <PhilosophySectionComponent />
-        <TwoCellsSectionComponent />
+        <div id="products"  style={{ scrollMarginTop: "100px" }}>
+          <ProductsSectionComponent />
+        </div>
+        <div id="philosophy"  style={{ scrollMarginTop: "100px" }}>
+          <PhilosophySectionComponent />
+        </div>
+        <div id="twocells"  style={{ scrollMarginTop: "100px" }}>
+          <TwoCellsSectionComponent />
+        </div>
         <div className="w-full h-auto bg-[url('/home/Bg.png')] bg-[size:1920px 1281px] bg-no-repeat bg-[position:bottom]">
-          <NewsSectionComponent />
-          <RankingSectionComponent />
-          <NewArrivalSectionComponent />
-          <CouponComponent />
-          <FAQSectionComponent />
+          <div id="news" style={{ scrollMarginTop: "100px" }}>
+            <NewsSectionComponent />
+          </div>
+          <div id="ranking" style={{ scrollMarginTop: "100px" }}>
+            <RankingSectionComponent />
+          </div>
+          <div id="newarrival" style={{ scrollMarginTop: "100px" }}>
+            <NewArrivalSectionComponent />
+          </div>
+          <div id="coupon" style={{ scrollMarginTop: "100px" }}>
+            <CouponComponent />
+          </div>
+          <div id="faq" style={{ scrollMarginTop: "100px" }}>
+            <FAQSectionComponent />
+          </div>
         </div>
       </PublicLayout>
     </SuspenseWrapper>

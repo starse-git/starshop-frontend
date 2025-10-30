@@ -79,6 +79,16 @@ export default function RootLayout({
           strategy="afterInteractive"
           id="gtag-script"
         />
+        {/* Event snippet for Contact conversion page */}
+        <Script
+          id="gtag-contact-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {'send_to': 'AW-16985761571/vXflCKfa1dMaEKPOuKM_'});
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} ${shipporiMincho.variable} ${cormorantInfant.variable} antialiased`}

@@ -4,19 +4,19 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const links = [
-  { href: "/", label: "商品一覧" },
-  { href: "/", label: "わたしたちのこと" },
-  { href: "/", label: "2つの幹細胞" },
-  { href: "/", label: "お知らせ" },
-  { href: "/", label: "ランキング" },
-  { href: "/", label: "新着商品" },
-  { href: "/", label: "クーポン" },
+  { href: "/products", label: "商品一覧" },
+  { href: "/philosophy", label: "わたしたちのこと" },
+  { href: "/stemcells", label: "2つの幹細胞" },
+  { href: "/#news", label: "お知らせ" },
+  { href: "/#ranking", label: "ランキング" },
+  { href: "/#newarrival", label: "新着商品" },
+  { href: "/#coupon", label: "クーポン" },
   { href: "/usepoints", label: "ポイントについて" },
 ];
 const linksBottom = [
-  { href: "/", label: "よくある質問" },
-  { href: "/", label: "お問い合わせ" },
-  { href: "/", label: "会社概要" },
+  { href: "/#faq", label: "よくある質問" },
+  { href: "/contactus", label: "お問い合わせ" },
+  { href: "/company-profile", label: "会社概要" },
   { href: "/policy", label: "プライバシーポリシー" },
   { href: "/rule", label: "利用規約" },
   { href: "/commercial", label: "特定商取引法に基づく表記" },
@@ -60,7 +60,7 @@ const PublicFooter = () => {
               </PublicFooterIconLink>
             ))}
           </div>
-          <p className="text-normal tracking-tighter uppercase">© 2025 スターテック株式会社</p>
+          <p className="text-normal tracking-tighter uppercase">© 2025 ビューテック株式会社</p>
         </div>
       </footer>
     </div>

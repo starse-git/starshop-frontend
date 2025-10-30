@@ -19,11 +19,11 @@ const CommercialPage = () => {
             <tbody className="max-sm:block">
               <tr className="max-sm:block max-sm:mb-5">
                 <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">販売業者の名称</td>
-                <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">STAR TECH 株式会社</td>
+                <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">BEAUTECH 株式会社</td>
               </tr>
               <tr className="max-sm:block max-sm:mb-5">
                 <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">会社URL</td>
-                <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">https://startech.co.jp/</td>
+                <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">https://beau-tech.jp/</td>
               </tr>
               <tr className="max-sm:block max-sm:mb-5">
                 <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">運営責任者</td>
@@ -32,8 +32,8 @@ const CommercialPage = () => {
               <tr className="max-sm:block max-sm:mb-5">
                 <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">所在地</td>
                 <td className="max-sm:block max-sm:w-full border-[0.5px] border-gray-200 px-4 py-4">
-                  〒104-0043 <br />
-                  東京都中央区湊2丁目4-1 TOMACビル 5階
+                  〒103-0004 <br />
+                  東京都中央区東日本橋1丁目3-3　TYDビル 3F
                 </td>
               </tr>
               <tr className="max-sm:block max-sm:mb-5">

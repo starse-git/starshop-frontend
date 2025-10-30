@@ -84,10 +84,10 @@ const PolicyPage = () => {
 
 
         <div className="mb-10">
-          <strong>STAR TECH株式会社</strong><br />
-          〒104-0043<br />
-          東京都中央区 湊2-4-1<br />
-          TOMACビル５階<br />
+          <strong>BEAUTECH 株式会社</strong><br />
+          〒103-0004<br />
+          東京都中央区東日本橋1丁目3-3<br />
+          TYDビル 3F<br />
           TEL: 03-6661-2879
         </div>
 

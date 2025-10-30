@@ -28,7 +28,8 @@ export async function updateSession(request: NextRequest) {
     '/philosophy',
     '/stemcells',
     '/ranking',
-    '/newarrival'
+    '/newarrival',
+    '/company-profile'
   ];
 
   const currentPath = request.nextUrl.pathname;
